@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle,Globe2 } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
   const zaloPhone = '0912345678';
