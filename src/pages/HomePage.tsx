@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Search, CheckCircle2, ShieldCheck, Truck, Users, 
-  FileText, Award, Globe, ArrowRight, Phone, MessageCircle, Calendar 
+  FileText, Award, Globe, ArrowRight, Calendar 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
