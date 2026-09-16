@@ -7,444 +7,334 @@ import {
   Users,
   FileText,
   Award,
-  Globe2,
+  Globe,
   ArrowRight,
   Calendar,
-  MessageCircle,
-  Factory,
-  Headphones,
-  Lightbulb,
-  Layers3,
-  Grid3X3,
-  Bath,
-  ArrowUpRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const HomePage: React.FC = () => {
   const zaloPhone = '0912345678';
 
-  const industries = [
-    {
-      title: 'Thiết bị âm thanh',
-      english: 'PRO AUDIO',
-      icon: Headphones,
-      image:
-        'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800',
-      items: [
-        'Micro không dây',
-        'Loa, Amply, Mixer',
-        'Thiết bị hội nghị',
-        'Thiết bị sân khấu',
-      ],
-    },
-    {
-      title: 'Thiết bị ánh sáng',
-      english: 'LIGHTING',
-      icon: Lightbulb,
-      image:
-        'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
-      items: [
-        'Đèn sân khấu',
-        'Đèn kiến trúc',
-        'LED & LED Film',
-        'Thiết bị điều khiển',
-      ],
-    },
-    {
-      title: 'Thảm & trải sàn',
-      english: 'FLOORING',
-      icon: Layers3,
-      image:
-        'https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800',
-      items: [
-        'Thảm văn phòng',
-        'Thảm khách sạn',
-        'Thảm sự kiện',
-        'Carpet Tile',
-      ],
-    },
-    {
-      title: 'Gạch ốp lát',
-      english: 'TILES',
-      icon: Grid3X3,
-      image:
-        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800',
-      items: [
-        'Gạch porcelain',
-        'Gạch ceramic',
-        'Gạch lót nền',
-        'Gạch ốp tường',
-      ],
-    },
-    {
-      title: 'Thiết bị vệ sinh',
-      english: 'SANITARY WARE',
-      icon: Bath,
-      image:
-        'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800',
-      items: [
-        'Sen vòi & vòi chậu',
-        'Bồn cầu & chậu rửa',
-        'Phụ kiện phòng tắm',
-        'Phụ kiện nhà bếp',
-      ],
-    },
-  ];
-
-  const process = [
+  const processSteps = [
     {
       num: '01',
       title: 'Tìm nguồn hàng',
       icon: Search,
-      desc: 'Tìm kiếm sản phẩm và nhà cung cấp phù hợp.',
+      desc: 'Tìm kiếm sản phẩm & nhà cung cấp phù hợp',
     },
     {
       num: '02',
       title: 'Đánh giá nhà cung cấp',
       icon: CheckCircle2,
-      desc: 'Kiểm tra năng lực và mức độ uy tín.',
+      desc: 'Kiểm tra năng lực & uy tín nhà cung cấp',
     },
     {
       num: '03',
       title: 'Kiểm tra sản phẩm',
       icon: ShieldCheck,
-      desc: 'Đánh giá chất lượng và thông số kỹ thuật.',
+      desc: 'Kiểm tra chất lượng & thông số kỹ thuật',
     },
     {
       num: '04',
       title: 'Đàm phán & đặt hàng',
       icon: FileText,
-      desc: 'Đàm phán giá, điều khoản và hợp đồng.',
+      desc: 'Đàm phán giá cả & điều khoản hợp đồng',
     },
     {
       num: '05',
       title: 'Chứng từ & thủ tục',
       icon: FileText,
-      desc: 'Chuẩn bị chứng từ xuất nhập khẩu.',
+      desc: 'Chuẩn bị chứng từ & hỗ trợ xuất nhập khẩu',
     },
     {
       num: '06',
-      title: 'Vận chuyển',
+      title: 'Vận chuyển Logistics',
       icon: Truck,
-      desc: 'Logistics quốc tế và giao hàng tận nơi.',
+      desc: 'Vận chuyển quốc tế & giao hàng tận nơi',
     },
     {
       num: '07',
-      title: 'Hậu mãi',
+      title: 'Hậu mãi & hỗ trợ',
       icon: Users,
-      desc: 'Hỗ trợ sau bán hàng và xử lý phát sinh.',
+      desc: 'Hỗ trợ sau bán hàng & xử lý phát sinh',
     },
   ];
 
   const strengths = [
     {
-      icon: Award,
-      title: 'Am hiểu chuyên ngành',
-      desc: 'Hiểu sản phẩm, thông số và nhu cầu thực tế của dự án.',
-    },
-    {
-      icon: Globe2,
-      title: 'Mạng lưới rộng khắp',
-      desc: 'Kết nối trực tiếp với hệ thống nhà máy tại Trung Quốc.',
-    },
-    {
       icon: Users,
+      title: 'Am hiểu chuyên ngành',
+      desc: 'Hiểu rõ sản phẩm âm thanh, ánh sáng và vật liệu dự án.',
+    },
+    {
+      icon: Globe,
+      title: 'Mạng lưới rộng khắp',
+      desc: 'Kết nối trực tiếp với các nhà máy uy tín tại Trung Quốc.',
+    },
+    {
+      icon: Award,
       title: 'Hỗ trợ kỹ thuật',
-      desc: 'Tư vấn giải pháp và lựa chọn sản phẩm phù hợp.',
+      desc: 'Đọc thông số và tư vấn giải pháp phù hợp.',
     },
     {
       icon: Truck,
       title: 'Kinh nghiệm XNK',
-      desc: 'Hỗ trợ chứng từ, logistics và thông quan.',
+      desc: 'Hỗ trợ thủ tục và logistics quốc tế.',
     },
     {
       icon: ShieldCheck,
       title: 'Uy tín & bảo mật',
-      desc: 'Minh bạch quy trình và bảo mật thông tin khách hàng.',
-    },
-  ];
-
-  const projects = [
-    {
-      title: 'Hội trường',
-      category: 'Âm thanh & Ánh sáng',
-      img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
-    },
-    {
-      title: 'Khách sạn',
-      category: 'Thảm trải sàn',
-      img: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800',
-    },
-    {
-      title: 'Showroom',
-      category: 'Gạch ốp lát',
-      img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800',
-    },
-    {
-      title: 'Nhà máy',
-      category: 'Thiết bị âm thanh',
-      img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800',
-    },
-  ];
-
-  const stats = [
-    {
-      value: '100+',
-      label: 'Nhà cung cấp',
-      desc: 'Đối tác uy tín tại Trung Quốc',
-    },
-    {
-      value: '500+',
-      label: 'Đơn hàng',
-      desc: 'Đã thực hiện thành công',
-    },
-    {
-      value: '10+',
-      label: 'Quốc gia',
-      desc: 'Xuất khẩu & nhập khẩu',
-    },
-    {
-      value: '5+',
-      label: 'Năm kinh nghiệm',
-      desc: 'Trong thương mại quốc tế',
+      desc: 'Minh bạch và bảo mật thông tin khách hàng.',
     },
   ];
 
   return (
-    <div className="bg-white text-slate-900">
-      {/* ================= HERO ================= */}
-      <section className="relative min-h-[650px] overflow-hidden bg-slate-950">
+    <main className="bg-white text-slate-900">
+      {/* =================================================
+          1. HERO
+      ================================================= */}
+      <section className="relative overflow-hidden bg-slate-950 text-white">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800')",
+              "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600')",
           }}
         />
 
+        {/* Overlay */}
         <div className="absolute inset-0 bg-slate-950/80" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/40 to-slate-950" />
 
-        {/* Decorations */}
-        <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
+        {/* Decorative light */}
+        <div className="absolute left-1/2 top-0 h-72 w-[600px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl" />
 
-        <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-blue-400" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 md:py-28 lg:px-8">
+          {/* Small label */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-amber-400" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
-                Global Sourcing & Trading
-              </span>
-            </div>
-
-            <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Kết nối nguồn hàng
-              <span className="block text-blue-400">
-                tối ưu chuỗi cung ứng
-              </span>
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Zeno Global cung cấp giải pháp sourcing, thương mại và xuất nhập
-              khẩu toàn diện, giúp doanh nghiệp kết nối trực tiếp với các nhà
-              sản xuất uy tín tại Trung Quốc và quốc tế.
-            </p>
-
-            {/* Buttons */}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/products"
-                className="group inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-blue-500"
-              >
-                Tìm nguồn hàng
-
-                <ArrowRight
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </Link>
-
-              <a
-                href={`https://zalo.me/${zaloPhone}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-all hover:bg-white hover:text-slate-950"
-              >
-                <MessageCircle size={18} />
-                Liên hệ tư vấn
-              </a>
-            </div>
-
-            {/* Trust */}
-            <div className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-              {[
-                'Nguồn hàng uy tín',
-                'Kiểm tra nhà máy',
-                'Hỗ trợ kỹ thuật',
-                'Logistics XNK',
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 text-xs font-medium text-slate-300"
-                >
-                  <CheckCircle2
-                    size={16}
-                    className="flex-shrink-0 text-blue-400"
-                  />
-
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= STATS ================= */}
-      <section className="relative z-10 mx-auto -mt-8 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/40 lg:grid-cols-4">
-          {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`p-6 sm:p-7 ${
-                index !== stats.length - 1 ? 'lg:border-r' : ''
-              } border-slate-200`}
-            >
-              <p className="text-3xl font-bold text-blue-600 sm:text-4xl">
-                {stat.value}
-              </p>
-
-              <p className="mt-1 font-bold text-slate-900">{stat.label}</p>
-
-              <p className="mt-1 text-xs leading-5 text-slate-500">
-                {stat.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= INDUSTRIES ================= */}
-      <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-                Our Industries
-              </p>
-
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-                Ngành hàng chúng tôi cung cấp
-              </h2>
-            </div>
-
-            <p className="max-w-xl text-sm leading-7 text-slate-500">
-              Tập trung vào các nhóm sản phẩm phục vụ dự án, thương mại và
-              phân phối với nguồn cung trực tiếp từ nhà sản xuất.
-            </p>
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
+              Global Sourcing • Trading • Import & Export
+            </span>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {industries.map((industry) => {
-              const Icon = industry.icon;
+          {/* Keep old style */}
+          <h1 className="text-4xl font-black uppercase tracking-tight sm:text-5xl md:text-6xl">
+            Your Product.
+          </h1>
+
+          <h2 className="mt-3 text-xl font-extrabold uppercase tracking-wide text-amber-400 sm:text-2xl md:text-3xl">
+            Our Sourcing & Trade Expertise.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-base font-medium leading-7 text-slate-300 md:text-lg">
+            Kết nối nguồn hàng chất lượng – Giải pháp thương mại & xuất nhập
+            khẩu toàn diện
+          </p>
+
+          <p className="mx-auto mt-2 max-w-2xl text-xs leading-6 text-slate-500 sm:text-sm">
+            Connecting you with reliable manufacturers and complete import -
+            export solutions.
+          </p>
+
+          {/* 4 Highlights */}
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+            {[
+              {
+                icon: CheckCircle2,
+                title: 'Nguồn hàng uy tín',
+                english: 'Reliable Sourcing',
+              },
+              {
+                icon: Award,
+                title: 'Am hiểu sản phẩm',
+                english: 'Industry Expertise',
+              },
+              {
+                icon: Users,
+                title: 'Hỗ trợ kỹ thuật',
+                english: 'Technical Support',
+              },
+              {
+                icon: Truck,
+                title: 'XNK đơn giản',
+                english: 'Import - Export',
+              },
+            ].map((item) => {
+              const Icon = item.icon;
 
               return (
                 <div
-                  key={industry.title}
-                  className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/60"
+                  key={item.title}
+                  className="group rounded-xl border border-white/10 bg-white/[0.06] p-4 text-left backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/30 hover:bg-white/[0.1]"
                 >
-                  <div className="relative h-44 overflow-hidden">
-                    <img
-                      src={industry.image}
-                      alt={industry.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" />
-
-                    <div className="absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/95 text-blue-600 shadow">
-                      <Icon size={20} />
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-amber-400/10">
+                      <Icon className="text-amber-400" size={18} />
                     </div>
-                  </div>
 
-                  <div className="p-5">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
-                      {industry.english}
-                    </p>
+                    <div>
+                      <p className="text-xs font-bold text-white">
+                        {item.title}
+                      </p>
 
-                    <h3 className="mt-1 text-base font-bold text-slate-950">
-                      {industry.title}
-                    </h3>
-
-                    <div className="mt-4 space-y-2">
-                      {industry.items.map((item) => (
-                        <div
-                          key={item}
-                          className="flex items-start gap-2 text-xs leading-5 text-slate-500"
-                        >
-                          <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-blue-500" />
-
-                          {item}
-                        </div>
-                      ))}
+                      <p className="mt-0.5 text-[10px] text-slate-500">
+                        {item.english}
+                      </p>
                     </div>
                   </div>
                 </div>
               );
             })}
           </div>
+
+          {/* Buttons */}
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/products"
+              className="group inline-flex items-center gap-2 rounded-lg bg-amber-400 px-6 py-3.5 text-xs font-bold uppercase text-slate-950 transition hover:bg-amber-300"
+            >
+              Tìm nguồn hàng
+
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </Link>
+
+            <a
+              href={`https://zalo.me/${zaloPhone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/[0.04] px-6 py-3.5 text-xs font-bold uppercase text-white transition hover:bg-white hover:text-slate-950"
+            >
+              Liên hệ tư vấn
+
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* ================= PROCESS ================= */}
-      <section className="bg-slate-50 py-20 sm:py-24">
+      {/* =================================================
+          2. INDUSTRIES
+      ================================================= */}
+      <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-              End-to-End Solution
-            </p>
+          <SectionHeader
+            title="Ngành hàng chúng tôi cung cấp"
+            subtitle="Our Industry Platforms"
+          />
 
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-              Quy trình sourcing toàn diện
-            </h2>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            <IndustryCard
+              image="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=700"
+              title="Thiết bị âm thanh"
+              english="PRO AUDIO"
+              items={[
+                'Micro không dây',
+                'Loa, Amply, Mixer',
+                'Thiết bị hội nghị',
+                'Thiết bị sân khấu',
+                'Phụ kiện âm thanh',
+              ]}
+            />
 
-            <p className="mt-4 text-sm leading-7 text-slate-500 sm:text-base">
-              Đồng hành từ bước tìm kiếm nguồn hàng cho đến giao nhận và hỗ trợ
-              sau bán hàng.
-            </p>
+            <IndustryCard
+              image="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700"
+              title="Thiết bị ánh sáng"
+              english="LIGHTING"
+              items={[
+                'Đèn sân khấu',
+                'Đèn kiến trúc',
+                'LED, LED Film',
+                'Thiết bị điều khiển',
+                'Phụ kiện',
+              ]}
+            />
+
+            <IndustryCard
+              image="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=700"
+              title="Thảm & trải sàn"
+              english="FLOORING"
+              items={[
+                'Thảm văn phòng',
+                'Thảm khách sạn',
+                'Thảm sự kiện',
+                'Thảm công trình',
+                'Carpet Tile',
+              ]}
+            />
+
+            <IndustryCard
+              image="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700"
+              title="Gạch ốp lát"
+              english="TILES"
+              items={[
+                'Gạch porcelain',
+                'Gạch ceramic',
+                'Gạch lót nền',
+                'Gạch ốp tường',
+                'Vật liệu hoàn thiện',
+              ]}
+            />
+
+            <IndustryCard
+              image="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=700"
+              title="Thiết bị vệ sinh"
+              english="SANITARY WARE"
+              items={[
+                'Sen vòi, vòi chậu',
+                'Bồn cầu, chậu rửa',
+                'Phụ kiện phòng tắm',
+                'Phụ kiện nhà bếp',
+                'Thiết bị cao cấp',
+              ]}
+            />
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {process.map((step, index) => {
+      {/* =================================================
+          3. PROCESS
+      ================================================= */}
+      <section className="border-t border-slate-100 bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Giải pháp toàn diện"
+            subtitle="Our End-to-End Solutions"
+          />
+
+          {/* 7 bước */}
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-7">
+            {processSteps.map((step) => {
               const Icon = step.icon;
 
               return (
                 <div
                   key={step.num}
-                  className={`group relative rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-blue-200 hover:shadow-lg ${
-                    index === 6 ? 'lg:col-start-2' : ''
-                  }`}
+                  className="group relative rounded-xl border border-slate-200 bg-white p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/50"
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
-                      <Icon size={21} />
-                    </div>
+                  <span className="text-lg font-black text-amber-500">
+                    {step.num}
+                  </span>
 
-                    <span className="text-2xl font-bold text-slate-200">
-                      {step.num}
-                    </span>
+                  <div className="mx-auto my-3 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                    <Icon size={20} />
                   </div>
 
-                  <h3 className="mt-5 font-bold text-slate-950">
+                  <h3 className="text-xs font-bold leading-5 text-slate-900">
                     {step.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
+                  <p className="mt-2 text-[11px] leading-5 text-slate-500">
                     {step.desc}
                   </p>
                 </div>
@@ -453,26 +343,24 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Strengths */}
-          <div className="mt-10 grid overflow-hidden rounded-2xl border border-slate-200 bg-white sm:grid-cols-2 lg:grid-cols-5">
-            {strengths.map((item, index) => {
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {strengths.map((item) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.title}
-                  className={`p-6 ${
-                    index !== strengths.length - 1
-                      ? 'lg:border-r lg:border-slate-200'
-                      : ''
-                  }`}
+                  className="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center transition duration-300 hover:bg-white hover:shadow-md"
                 >
-                  <Icon size={23} className="text-blue-600" />
+                  <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-white text-blue-600 shadow-sm">
+                    <Icon size={21} />
+                  </div>
 
-                  <h4 className="mt-4 text-sm font-bold text-slate-900">
+                  <h4 className="mt-4 text-xs font-bold uppercase text-slate-900">
                     {item.title}
                   </h4>
 
-                  <p className="mt-2 text-xs leading-5 text-slate-500">
+                  <p className="mt-2 text-[11px] leading-5 text-slate-500">
                     {item.desc}
                   </p>
                 </div>
@@ -482,199 +370,129 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= EXHIBITIONS ================= */}
-      <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24">
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
+      {/* =================================================
+          4. EXHIBITIONS
+      ================================================= */}
+      <section className="relative overflow-hidden bg-slate-950 py-16 text-white sm:py-20">
+        <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-400">
-                International Exhibitions
-              </p>
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-black uppercase tracking-wide sm:text-3xl">
+              Triển lãm âm thanh quốc tế
+            </h2>
 
-              <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-                Kết nối tại triển lãm quốc tế
-              </h2>
-            </div>
-
-            <p className="max-w-lg text-sm leading-7 text-slate-400">
-              Zeno Global hỗ trợ khách hàng tiếp cận nhà sản xuất, sản phẩm mới
-              và cơ hội hợp tác tại các triển lãm chuyên ngành.
+            <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+              International Pro Audio Exhibitions
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Vietnam */}
-            <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-400">
-                  VIỆT NAM
-                </span>
+          <div className="grid gap-6 md:grid-cols-2">
+            <ExhibitionCard
+              location="VIỆT NAM"
+              title="Triển lãm Quốc tế Thiết bị & Công nghệ Âm thanh Việt Nam"
+              english="VIETNAM INTERNATIONAL PRO AUDIO EXHIBITION"
+              items={[
+                'Giới thiệu sản phẩm & công nghệ mới nhất',
+                'Kết nối trực tiếp với nhà máy và khách hàng',
+                'Trải nghiệm sản phẩm thực tế',
+                'Hội thảo chuyên ngành & đào tạo',
+              ]}
+              footer="Hà Nội | TP. Hồ Chí Minh"
+            />
 
-                <Calendar size={20} className="text-slate-500" />
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold leading-snug">
-                Triển lãm Quốc tế Thiết bị & Công nghệ Âm thanh Việt Nam
-              </h3>
-
-              <p className="mt-2 text-xs uppercase tracking-wider text-slate-500">
-                Vietnam International Pro Audio Exhibition
-              </p>
-
-              <div className="mt-6 space-y-3">
-                {[
-                  'Giới thiệu sản phẩm và công nghệ mới',
-                  'Kết nối nhà máy và khách hàng',
-                  'Trải nghiệm sản phẩm thực tế',
-                  'Hội thảo & đào tạo chuyên ngành',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 text-sm text-slate-300"
-                  >
-                    <CheckCircle2
-                      size={17}
-                      className="flex-shrink-0 text-blue-400"
-                    />
-
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-xs font-semibold text-slate-400">
-                <span>Hà Nội · TP. Hồ Chí Minh</span>
-                <span>Hàng năm</span>
-              </div>
-            </div>
-
-            {/* Guangzhou */}
-            <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-400">
-                  TRUNG QUỐC
-                </span>
-
-                <Globe2 size={20} className="text-slate-500" />
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold leading-snug">
-                Triển lãm Âm thanh Chuyên nghiệp Quốc tế Quảng Châu
-              </h3>
-
-              <p className="mt-2 text-xs uppercase tracking-wider text-slate-500">
-                Guangzhou International Pro Audio Exhibition
-              </p>
-
-              <div className="mt-6 space-y-3">
-                {[
-                  'Quy tụ các thương hiệu âm thanh',
-                  'Cập nhật xu hướng và công nghệ mới',
-                  'Kết nối nhà máy & supplier',
-                  'Phát triển cơ hội hợp tác',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 text-sm text-slate-300"
-                  >
-                    <CheckCircle2
-                      size={17}
-                      className="flex-shrink-0 text-blue-400"
-                    />
-
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-xs font-semibold text-slate-400">
-                <span>Quảng Châu, Trung Quốc</span>
-                <span>Hàng năm</span>
-              </div>
-            </div>
+            <ExhibitionCard
+              location="TRUNG QUỐC"
+              title="Triển lãm Âm thanh Chuyên nghiệp Quốc tế Quảng Châu"
+              english="GUANGZHOU INTERNATIONAL PRO AUDIO EXHIBITION"
+              items={[
+                'Quy tụ các thương hiệu âm thanh hàng đầu',
+                'Cập nhật xu hướng & công nghệ mới',
+                'Kết nối nhà máy & supplier chất lượng',
+                'Cơ hội hợp tác & phát triển thị trường',
+              ]}
+              footer="Quảng Châu, Trung Quốc"
+            />
           </div>
 
-          <div className="mt-6 flex flex-col items-start justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:flex-row sm:items-center">
-            <div>
-              <p className="font-semibold text-white">
-                Bạn muốn tham dự triển lãm cùng Zeno Global?
-              </p>
-
-              <p className="mt-1 text-xs text-slate-400">
-                Liên hệ để nhận thông tin lịch trình và hỗ trợ kết nối.
-              </p>
-            </div>
+          {/* Exhibition CTA */}
+          <div className="mt-7 flex flex-col items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.05] p-5 sm:flex-row">
+            <p className="max-w-3xl text-xs leading-6 text-slate-400">
+              Zeno Global hỗ trợ khách hàng tham dự, kết nối nhà cung cấp và
+              tìm kiếm sản phẩm tại các triển lãm âm thanh quốc tế.
+            </p>
 
             <a
               href={`https://zalo.me/${zaloPhone}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+              className="flex flex-shrink-0 items-center gap-2 rounded-lg bg-amber-400 px-5 py-3 text-xs font-bold text-slate-950 transition hover:bg-amber-300"
             >
-              <Calendar size={17} />
+              <Calendar size={15} />
               Xem lịch triển lãm
             </a>
           </div>
         </div>
       </section>
 
-      {/* ================= PROJECTS ================= */}
-      <section className="py-20 sm:py-24">
+      {/* =================================================
+          5. PROJECTS
+      ================================================= */}
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-                Featured Projects
-              </p>
+          <SectionHeader
+            title="Dự án tiêu biểu"
+            subtitle="Featured Projects"
+          />
 
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-                Dự án tiêu biểu
-              </h2>
-            </div>
-
-            <Link
-              to="/projects"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600"
-            >
-              Xem tất cả dự án
-
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-          </div>
-
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {projects.map((project) => (
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
+            {[
+              {
+                title: 'Hội trường',
+                desc: 'Âm thanh & Ánh sáng',
+                img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700',
+              },
+              {
+                title: 'Khách sạn',
+                desc: 'Thảm trải sàn',
+                img: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=700',
+              },
+              {
+                title: 'Showroom',
+                desc: 'Gạch ốp lát',
+                img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700',
+              },
+              {
+                title: 'Nhà máy',
+                desc: 'Thiết bị âm thanh',
+                img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=700',
+              },
+              {
+                title: 'Khách sạn',
+                desc: 'Thiết bị vệ sinh',
+                img: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=700',
+              },
+            ].map((project, index) => (
               <div
-                key={`${project.title}-${project.category}`}
-                className="group relative h-[340px] overflow-hidden rounded-2xl"
+                key={index}
+                className="group overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <div className="h-36 overflow-hidden sm:h-40">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/15 to-transparent" />
+                <div className="p-4 text-center">
+                  <h3 className="text-sm font-bold text-slate-900">
+                    {project.title}
+                  </h3>
 
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-blue-300">
-                    {project.category}
+                  <p className="mt-1 text-[11px] text-slate-500">
+                    {project.desc}
                   </p>
-
-                  <div className="mt-1 flex items-end justify-between gap-3">
-                    <h3 className="text-xl font-bold text-white">
-                      {project.title}
-                    </h3>
-
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition group-hover:bg-blue-600">
-                      <ArrowUpRight size={17} />
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -682,45 +500,207 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
-      <section className="px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-blue-600 px-6 py-12 text-white sm:px-10 lg:px-14 lg:py-14">
-          <div className="absolute -right-20 -top-28 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
+      {/* =================================================
+          6. STATISTICS
+      ================================================= */}
+      <section className="border-t border-slate-800 bg-slate-950 py-12 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 text-center md:grid-cols-4">
+          {[
+            {
+              number: '100+',
+              text: 'Nhà cung cấp uy tín tại Trung Quốc',
+            },
+            {
+              number: '500+',
+              text: 'Đơn hàng đã thực hiện thành công',
+            },
+            {
+              number: '10+',
+              text: 'Quốc gia đã xuất khẩu và nhập khẩu',
+            },
+            {
+              number: '5+',
+              text: 'Năm kinh nghiệm trong thương mại quốc tế',
+            },
+          ].map((stat) => (
+            <div key={stat.number}>
+              <p className="text-3xl font-black text-amber-400 sm:text-4xl">
+                {stat.number}
+              </p>
 
-          <div className="relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
-                <Factory size={23} />
-              </div>
-
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                Bạn đang tìm kiếm sản phẩm hoặc nhà cung cấp?
-              </h2>
-
-              <p className="mt-3 text-sm leading-7 text-blue-100 sm:text-base">
-                Gửi thông tin sản phẩm bạn cần. Zeno Global sẽ hỗ trợ tìm nguồn,
-                đánh giá nhà cung cấp và đề xuất giải pháp phù hợp.
+              <p className="mx-auto mt-2 max-w-[180px] text-xs leading-5 text-slate-400">
+                {stat.text}
               </p>
             </div>
-
-            <a
-              href={`https://zalo.me/${zaloPhone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex flex-shrink-0 items-center gap-3 rounded-xl bg-white px-6 py-4 text-sm font-bold text-blue-700 transition-all hover:bg-slate-50"
-            >
-              <MessageCircle size={19} />
-
-              Gửi yêu cầu ngay
-
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </a>
-          </div>
+          ))}
         </div>
       </section>
+
+      {/* =================================================
+          7. FINAL CTA
+      ================================================= */}
+      <section className="bg-amber-400 px-4 py-9 text-slate-950">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+          <div>
+            <h3 className="text-lg font-black uppercase sm:text-xl">
+              Bạn đang tìm kiếm nguồn hàng hoặc sản phẩm cụ thể?
+            </h3>
+
+            <p className="mt-2 max-w-3xl text-xs font-medium leading-6 text-slate-800 sm:text-sm">
+              Gửi yêu cầu cho chúng tôi. Zeno Global sẽ tìm kiếm và đề xuất
+              giải pháp phù hợp với nhu cầu của doanh nghiệp.
+            </p>
+          </div>
+
+          <a
+            href={`https://zalo.me/${zaloPhone}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex flex-shrink-0 items-center gap-2 rounded-lg bg-slate-950 px-6 py-3.5 text-xs font-bold uppercase text-white transition hover:bg-slate-800"
+          >
+            Gửi yêu cầu ngay
+
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+/* =================================================
+   REUSABLE COMPONENTS
+================================================= */
+
+interface SectionHeaderProps {
+  title: string;
+  subtitle: string;
+}
+
+const SectionHeader: React.FC<SectionHeaderProps> = ({
+  title,
+  subtitle,
+}) => {
+  return (
+    <div className="mb-10 text-center sm:mb-12">
+      <h2 className="text-2xl font-black uppercase tracking-wide text-slate-950 sm:text-3xl">
+        {title}
+      </h2>
+
+      <div className="mx-auto mt-3 h-1 w-10 rounded-full bg-amber-400" />
+
+      <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+        {subtitle}
+      </p>
+    </div>
+  );
+};
+
+interface IndustryCardProps {
+  image: string;
+  title: string;
+  english: string;
+  items: string[];
+}
+
+const IndustryCard: React.FC<IndustryCardProps> = ({
+  image,
+  title,
+  english,
+  items,
+}) => {
+  return (
+    <div className="group overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/60">
+      <div className="h-40 overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="p-5">
+        <div className="text-center">
+          <h3 className="text-sm font-bold uppercase text-slate-900">
+            {title}
+          </h3>
+
+          <p className="mt-1 text-[10px] font-bold uppercase tracking-wider text-blue-600">
+            {english}
+          </p>
+        </div>
+
+        <div className="mt-4 h-px bg-slate-100" />
+
+        <ul className="mt-4 space-y-2">
+          {items.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-2 text-xs leading-5 text-slate-600"
+            >
+              <span className="mt-[7px] h-1 w-1 flex-shrink-0 rounded-full bg-amber-400" />
+
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+interface ExhibitionCardProps {
+  location: string;
+  title: string;
+  english: string;
+  items: string[];
+  footer: string;
+}
+
+const ExhibitionCard: React.FC<ExhibitionCardProps> = ({
+  location,
+  title,
+  english,
+  items,
+  footer,
+}) => {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 transition duration-300 hover:bg-white/[0.08] sm:p-7">
+      <span className="inline-flex rounded-full bg-amber-400/10 px-3 py-1 text-[10px] font-bold tracking-wider text-amber-400">
+        {location}
+      </span>
+
+      <h3 className="mt-5 text-sm font-bold leading-6 text-white sm:text-base">
+        {title}
+      </h3>
+
+      <p className="mt-1 text-[10px] font-medium uppercase leading-5 text-slate-500">
+        {english}
+      </p>
+
+      <ul className="mt-6 space-y-3">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="flex items-start gap-3 text-xs leading-5 text-slate-300"
+          >
+            <CheckCircle2
+              size={15}
+              className="mt-0.5 flex-shrink-0 text-blue-400"
+            />
+
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-[11px] font-bold text-amber-400">
+        <span>{footer}</span>
+        <span>Hàng năm</span>
+      </div>
     </div>
   );
 };
