@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
+ArrowRight,
   CalendarDays,
   Clock3,
-  Newspaper,
   TrendingUp,
   Headphones,
   Speaker,

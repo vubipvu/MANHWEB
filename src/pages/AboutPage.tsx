@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   ShieldCheck,
-  Award,
-  Users,
   Globe2,
   CheckCircle2,
   ArrowUpRight,
