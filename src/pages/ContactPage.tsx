@@ -9,56 +9,51 @@ import {
   CheckCircle2,
   Headphones,
   Speaker,
-  Wrench,
-  ShieldCheck,
+  FileCheck2,
+  Ship,
+  Globe2,
+  Sliders,
+  Mic,
+  Zap,
+  Cable,
+  Radio,
+  Disc3,
 } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
-  const zaloPhone = '0912345678';
-  const phoneDisplay = '0912 345 678';
-  const email = 'info@zenoglobal.vn';
+  const phoneRaw = '0332933226';
+  const phoneDisplay = '0332 933 226';
+  const email = 'zenoglobalvietnam@gmail.com';
 
-  const contactItems = [
-    {
-      icon: Phone,
-      label: 'Hotline / Zalo',
-      value: phoneDisplay,
-      href: `tel:${zaloPhone}`,
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      value: email,
-      href: `mailto:${email}`,
-    },
-    {
-      icon: MapPin,
-      label: 'Văn phòng',
-      value: 'Hà Nội, Việt Nam',
-      href: undefined,
-    },
+  const productCategories = [
+    { icon: Zap, label: 'Cục đẩy công suất' },
+    { icon: Sliders, label: 'Mixer - Vang số' },
+    { icon: Mic, label: 'Micro chuyên nghiệp' },
+    { icon: Speaker, label: 'Hệ thống Loa' },
+    { icon: Disc3, label: 'Quản lý nguồn' },
+    { icon: Cable, label: 'Phụ kiện âm thanh' },
   ];
 
-  const benefits = [
+  const specializedServices = [
     {
-      icon: Speaker,
-      title: 'Tư vấn chọn loa',
-      desc: 'Theo nhu cầu, diện tích và ngân sách',
+      icon: Radio,
+      title: 'Đo kiểm & Hợp quy Micro',
+      desc: 'Tư vấn chứng nhận hợp chuẩn, hợp quy tần số micro không dây',
     },
     {
-      icon: Wrench,
-      title: 'Hỗ trợ kỹ thuật',
-      desc: 'Cấu hình hệ thống và thông số thiết bị',
+      icon: Ship,
+      title: 'Tư vấn Xuất Nhập Khẩu',
+      desc: 'Hỗ trợ thủ tục hải quan, logistics thiết bị âm thanh quốc tế',
     },
     {
-      icon: ShieldCheck,
-      title: 'Thông tin rõ ràng',
-      desc: 'Minh bạch sản phẩm và phương án đề xuất',
+      icon: Globe2,
+      title: 'Triển lãm Demo Âm thanh',
+      desc: 'Cập nhật và kết nối sự kiện, expo, demo trong và ngoài nước',
     },
   ];
 
   return (
-    <main className="bg-white">
+    <main className="bg-white text-slate-900">
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div
@@ -67,221 +62,242 @@ export const ContactPage: React.FC = () => {
             backgroundImage: "url('/images/home/1.jpg')",
           }}
         />
-
-        <div className="absolute inset-0 bg-slate-950/88" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
-
-        <div className="absolute left-1/2 top-0 h-72 w-[700px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl" />
+        <div className="absolute inset-0 bg-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-950/70 to-slate-950" />
+        <div className="absolute left-1/2 top-0 h-80 w-[720px] -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 backdrop-blur">
             <Headphones size={15} className="text-amber-400" />
-
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
-              Contact Zeno Global
+              Liên Hệ Zeno Global
             </span>
           </div>
 
           <h1 className="text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            Liên hệ tư vấn
+            Tư vấn thiết bị &amp;
             <span className="block text-amber-400">
-              giải pháp âm thanh
+              Giải pháp âm thanh chuyên nghiệp
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Liên hệ Zeno Global để được tư vấn loa, cấu hình hệ thống âm thanh
-            và lựa chọn thiết bị phù hợp với nhu cầu sử dụng thực tế.
+            Đơn vị cung ứng thiết bị âm thanh toàn diện, đo kiểm hợp quy tần số 
+            và xúc tiến thương mại quốc tế uy tín.
           </p>
 
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-slate-500">
-            Hội trường · Sân khấu · Sự kiện · Showroom · Công trình
-          </p>
+          {/* Product Badges */}
+          <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2.5">
+            {productCategories.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3.5 py-1.5 text-xs font-medium text-slate-200 backdrop-blur"
+                >
+                  <Icon size={14} className="text-amber-400" />
+                  <span>{item.label}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ================= CONTACT ================= */}
+      {/* ================= MAIN CONTACT SECTION ================= */}
       <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
         <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-50 blur-3xl" />
         <div className="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-amber-50 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-            {/* ================= LEFT ================= */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            {/* Left: Contact Info & Locations */}
+            <div className="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-600">
-                  Thông tin liên hệ
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600">
+                  Thông tin kết nối
                 </p>
-
-                <h2 className="mt-3 text-2xl font-bold text-slate-950 sm:text-3xl">
-                  Chúng tôi luôn sẵn sàng hỗ trợ
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+                  Trực tiếp tiếp nhận &amp; Hỗ trợ
                 </h2>
-
-                <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
-                  Gửi thông tin về nhu cầu sử dụng, không gian, sản phẩm hoặc
-                  ngân sách dự kiến. Đội ngũ Zeno Global sẽ hỗ trợ tư vấn phương
-                  án phù hợp trong thời gian sớm nhất.
+                <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base">
+                  Liên hệ trao đổi về cấu hình âm thanh dự án, báo giá thiết bị hoặc các dịch vụ hỗ trợ kỹ thuật, xúc tiến thương mại.
                 </p>
-              </div>
 
-              {/* Contact items */}
-              <div className="mt-8 space-y-4">
-                {contactItems.map((item) => {
-                  const Icon = item.icon;
-
-                  const content = (
-                    <div className="group flex items-center gap-4 rounded-2xl border border-slate-200 p-4 transition-all duration-300 hover:border-blue-200 hover:bg-blue-50/40">
-                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-slate-950 text-amber-400 transition-all duration-300 group-hover:bg-amber-400 group-hover:text-slate-950">
-                        <Icon size={21} />
-                      </div>
-
-                      <div className="min-w-0">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                          {item.label}
-                        </p>
-
-                        <p className="mt-1 text-sm font-semibold text-slate-900 sm:text-base">
-                          {item.value}
-                        </p>
-                      </div>
-
-                      {item.href && (
-                        <ArrowUpRight
-                          size={18}
-                          className="ml-auto text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-600"
-                        />
-                      )}
+                {/* Direct Communications */}
+                <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+                  <a
+                    href={`tel:${phoneRaw}`}
+                    className="group flex items-center gap-3.5 rounded-2xl border border-slate-200 p-4 transition duration-200 hover:border-blue-200 hover:bg-blue-50/50"
+                  >
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-slate-950 text-amber-400 group-hover:bg-amber-400 group-hover:text-slate-950">
+                      <Phone size={19} />
                     </div>
-                  );
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                        Hotline / Zalo
+                      </p>
+                      <p className="truncate text-sm font-bold text-slate-900">
+                        {phoneDisplay}
+                      </p>
+                    </div>
+                    <ArrowUpRight size={16} className="ml-auto text-slate-300 group-hover:text-blue-600" />
+                  </a>
 
-                  return item.href ? (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="block"
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    <div key={item.label}>{content}</div>
-                  );
-                })}
-              </div>
-
-              {/* Working time */}
-              <div className="mt-6 flex items-start gap-3 rounded-2xl bg-slate-50 p-4">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white text-blue-600 shadow-sm">
-                  <Clock3 size={19} />
+                  <a
+                    href={`mailto:${email}`}
+                    className="group flex items-center gap-3.5 rounded-2xl border border-slate-200 p-4 transition duration-200 hover:border-blue-200 hover:bg-blue-50/50"
+                  >
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-slate-950 text-amber-400 group-hover:bg-amber-400 group-hover:text-slate-950">
+                      <Mail size={19} />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                        Email liên hệ
+                      </p>
+                      <p className="truncate text-xs font-bold text-slate-900">
+                        {email}
+                      </p>
+                    </div>
+                    <ArrowUpRight size={16} className="ml-auto text-slate-300 group-hover:text-blue-600" />
+                  </a>
                 </div>
 
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">
-                    Thời gian hỗ trợ
-                  </p>
+                {/* Locations */}
+                <div className="mt-4 space-y-3">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4">
+                    <div className="flex items-start gap-3.5">
+                      <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm">
+                        <MapPin size={18} />
+                      </div>
+                      <div>
+                        <span className="inline-block rounded bg-blue-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-blue-700">
+                          Hà Nội
+                        </span>
+                        <p className="mt-1 text-sm font-semibold text-slate-900">
+                          Số 1 Trần Thủ Độ, Quận Hoàng Mai, Hà Nội
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <p className="mt-1 text-sm text-slate-500">
-                    Thứ 2 – Thứ 7 · 08:00 – 18:00
-                  </p>
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4">
+                    <div className="flex items-start gap-3.5">
+                      <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-slate-800 text-white shadow-sm">
+                        <MapPin size={18} />
+                      </div>
+                      <div>
+                        <span className="inline-block rounded bg-slate-200 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-slate-700">
+                          Hà Tĩnh
+                        </span>
+                        <p className="mt-1 text-sm font-semibold text-slate-900">
+                          56 La Sơn Phu Tử, Phường Thành Sen, Hà Tĩnh
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Working hours & Policy Badges */}
+              <div className="mt-6 border-t border-slate-100 pt-5">
+                <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
+                  <div className="flex items-center gap-2">
+                    <Clock3 size={16} className="text-slate-400" />
+                    <span>Làm việc: Thứ 2 – Thứ 7 (08:00 – 18:00)</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="flex items-center gap-1 text-slate-600">
+                      <FileCheck2 size={14} className="text-emerald-600" /> Chính sách bảo mật
+                    </span>
+                    <span className="flex items-center gap-1 text-slate-600">
+                      <Ship size={14} className="text-blue-600" /> Chính sách vận chuyển
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* ================= RIGHT ================= */}
-            <div className="relative overflow-hidden rounded-3xl bg-slate-950 p-7 text-white shadow-xl shadow-slate-200/60 sm:p-9 lg:p-10">
+            {/* Right: Technical Consultation & Zalo CTA */}
+            <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl bg-slate-950 p-7 text-white shadow-xl shadow-slate-200/60 sm:p-9 lg:p-10">
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-600/20 blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-amber-400/5 blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
 
-              <div className="relative flex h-full flex-col">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.07]">
-                  <Headphones size={27} className="text-amber-400" />
+              <div className="relative">
+                <div className="flex h-13 w-13 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.08] p-3">
+                  <Headphones size={26} className="text-amber-400" />
                 </div>
 
-                <p className="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-amber-400">
-                  Professional Audio Support
+                <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
+                  Audio Solutions &amp; Trade Consulting
                 </p>
 
-                <h2 className="mt-3 text-2xl font-bold leading-tight sm:text-3xl">
-                  Chưa biết nên chọn hệ thống loa nào?
-                </h2>
+                <h3 className="mt-2 text-2xl font-bold sm:text-3xl">
+                  Tư vấn kỹ thuật &amp; Pháp lý chuyên ngành
+                </h3>
 
-                <p className="mt-5 text-sm leading-7 text-slate-400 sm:text-base">
-                  Hãy gửi cho chúng tôi thông tin về diện tích, mục đích sử dụng,
-                  mức đầu tư hoặc sản phẩm bạn đang quan tâm. Đội ngũ Zeno Global
-                  sẽ hỗ trợ đề xuất cấu hình phù hợp.
+                <p className="mt-4 text-sm leading-6 text-slate-400">
+                  Đội ngũ Zeno Global trực tiếp hỗ trợ giải pháp thiết bị toàn diện, tiêu chuẩn đo kiểm hợp quy và dịch vụ thương mại:
                 </p>
 
-                {/* Benefits */}
-                <div className="mt-8 space-y-4">
+                <div className="mt-6 space-y-3.5">
                   {[
-                    'Tư vấn loa theo diện tích và nhu cầu',
-                    'Hỗ trợ lựa chọn cấu hình thiết bị',
-                    'Tư vấn sản phẩm và thông số kỹ thuật',
-                    'Hỗ trợ nguồn hàng & logistics khi cần',
+                    'Đo kiểm, tư vấn hợp quy micro không dây chuẩn tần số',
+                    'Hỗ trợ thủ tục xuất nhập khẩu thiết bị âm thanh',
+                    'Tư vấn thông tin triển lãm demo thiết bị trong & ngoài nước',
+                    'Cung cấp đồng bộ: Cục đẩy, Vang số, Micro, Loa, Quản lý nguồn',
                   ].map((item) => (
-                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle2
-                        size={18}
-                        className="flex-shrink-0 text-blue-400"
-                      />
-
-                      <span className="text-sm font-medium text-slate-200">
-                        {item}
-                      </span>
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle2 size={18} className="mt-0.5 flex-shrink-0 text-blue-400" />
+                      <span className="text-sm font-medium text-slate-200">{item}</span>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                {/* CTA */}
-                <div className="mt-auto pt-10">
-                  <a
-                    href={`https://zalo.me/${zaloPhone}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-blue-500"
-                  >
-                    <MessageCircle size={20} />
-
-                    <span>Chat Zalo nhận tư vấn</span>
-
-                    <ArrowUpRight
-                      size={17}
-                      className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
-                  </a>
-
-                  <p className="mt-4 text-center text-xs text-slate-500">
-                    Phản hồi nhanh trong thời gian làm việc
-                  </p>
-                </div>
+              {/* Zalo Direct CTA */}
+              <div className="relative mt-8 pt-6">
+                <a
+                  href={`https://zalo.me/${phoneRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 py-4 text-sm font-bold text-white transition duration-200 hover:bg-blue-500"
+                >
+                  <MessageCircle size={20} />
+                  <span>Chat Zalo ({phoneDisplay})</span>
+                  <ArrowUpRight
+                    size={17}
+                    className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <p className="mt-3 text-center text-xs text-slate-500">
+                  Tư vấn kỹ thuật &amp; báo giá cấu hình âm thanh dự án nhanh chóng
+                </p>
               </div>
             </div>
           </div>
 
-          {/* ================= SERVICE BENEFITS ================= */}
+          {/* ================= SPECIALIZED SERVICES ================= */}
           <div className="mt-8 grid grid-cols-1 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 sm:grid-cols-3">
-            {benefits.map((item, index) => {
-              const Icon = item.icon;
-
+            {specializedServices.map((service, idx) => {
+              const Icon = service.icon;
               return (
                 <div
-                  key={item.title}
+                  key={service.title}
                   className={`p-6 text-center ${
-                    index !== benefits.length - 1
+                    idx !== specializedServices.length - 1
                       ? 'border-b border-slate-200 sm:border-b-0 sm:border-r'
                       : ''
                   }`}
                 >
-                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-600 shadow-sm">
-                    <Icon size={19} />
+                  <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-white text-blue-600 shadow-sm">
+                    <Icon size={20} />
                   </div>
-
-                  <p className="mt-3 font-bold text-slate-900">
-                    {item.title}
-                  </p>
-
-                  <p className="mt-1 text-xs leading-5 text-slate-500">
-                    {item.desc}
+                  <h4 className="mt-3 text-base font-bold text-slate-900">
+                    {service.title}
+                  </h4>
+                  <p className="mt-1.5 text-xs leading-5 text-slate-600">
+                    {service.desc}
                   </p>
                 </div>
               );
@@ -290,33 +306,29 @@ export const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= QUICK CTA ================= */}
-      <section className="bg-amber-400 px-4 py-9 text-slate-950">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 sm:px-2 md:flex-row md:items-center">
+      {/* ================= QUICK CTA BANNER ================= */}
+      <section className="bg-amber-400 px-4 py-8 text-slate-950">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 sm:px-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-lg font-black uppercase sm:text-xl">
-              Cần báo giá hoặc tư vấn cấu hình âm thanh?
+              Cần hồ sơ thiết bị, đo kiểm hợp quy hoặc xuất nhập khẩu?
             </h2>
-
-            <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-800">
-              Gửi hình ảnh, thông số hoặc nhu cầu của bạn qua Zalo để được hỗ
-              trợ nhanh hơn.
+            <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-900">
+              Gửi thông số kỹ thuật hoặc yêu cầu danh mục hàng hóa qua Zalo/Email để được xử lý ngay.
             </p>
           </div>
 
           <a
-            href={`https://zalo.me/${zaloPhone}`}
+            href={`https://zalo.me/${phoneRaw}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex flex-shrink-0 items-center gap-2 rounded-lg bg-slate-950 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-slate-800"
+            className="group inline-flex flex-shrink-0 items-center gap-2 rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-slate-800"
           >
             <MessageCircle size={18} />
-
-            Gửi yêu cầu ngay
-
+            <span>Liên hệ Zeno Global</span>
             <ArrowUpRight
               size={16}
-              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
           </a>
         </div>

@@ -1,95 +1,100 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-ArrowRight,
+  ArrowRight,
   CalendarDays,
   Clock3,
   TrendingUp,
   Headphones,
   Speaker,
   MessageCircle,
+  Radio,
+  Ship,
+  Globe2,
+  FileCheck2,
 } from 'lucide-react';
 
 const news = [
   {
     id: 1,
-    slug: 'xu-huong-thiet-bi-am-thanh-san-khau-2026',
-    title: 'Xu hướng thiết bị âm thanh sân khấu & hội trường 2026',
-    date: '02/09/2026',
-    category: 'Công nghệ âm thanh',
-    readTime: '5 phút đọc',
+    slug: 'quy-trinh-do-kiem-hop-quy-micro-khong-day-2026',
+    title: 'Quy trình đo kiểm & chứng nhận hợp quy micro không dây năm 2026',
+    date: '10/10/2026',
+    category: 'Pháp lý & Đo kiểm',
+    readTime: '6 phút đọc',
     desc:
-      'Cập nhật những xu hướng mới về loa Line Array, hệ thống khuếch đại và xử lý tín hiệu dành cho sân khấu và hội trường.',
-    image: '/images/home/1.jpg',
+      'Hướng dẫn chi tiết về quy định quản lý dải tần sóng vô tuyến, các bước đo kiểm chỉ tiêu kỹ thuật và thủ tục công bố hợp quy cho thiết bị micro không dây nhập khẩu.',
+    image: '/images/home/ADE1396.JPG',
     featured: true,
   },
   {
     id: 2,
-    slug: 'cach-chon-loa-line-array',
-    title: 'Cách lựa chọn loa Line Array phù hợp cho sân khấu',
-    date: '28/08/2026',
-    category: 'Tư vấn kỹ thuật',
-    readTime: '6 phút đọc',
+    slug: 'thu-tuc-nhap-khau-thiet-bi-am-thanh-chuyen-nghiep',
+    title: 'Lưu ý thủ tục hải quan và xuất nhập khẩu thiết bị âm thanh sân khấu',
+    date: '28/09/2026',
+    category: 'Xuất Nhập Khẩu',
+    readTime: '5 phút đọc',
     desc:
-      'Những yếu tố cần cân nhắc như diện tích, số lượng khán giả, công suất và độ phủ âm thanh khi lựa chọn hệ thống Line Array.',
-    image: '/images/home/ROB1146.JPG',
+      'Kinh nghiệm tra mã HS code cho cục đẩy, bàn mixer, loa công suất lớn, xử lý chứng nhận xuất xứ (C/O) và tối ưu thuế nhập khẩu chính ngạch.',
+    image: '/images/home/1.jpg',
   },
   {
     id: 3,
-    slug: 'loa-fullrange-va-subwoofer-khac-nhau-the-nao',
-    title: 'Loa Full-range và Subwoofer khác nhau như thế nào?',
-    date: '20/08/2026',
-    category: 'Kiến thức âm thanh',
-    readTime: '4 phút đọc',
+    slug: 'xu-huong-loa-line-array-san-khau-hoi-truong',
+    title: 'Cách lựa chọn cấu hình loa Line Array và Subwoofer cho hội trường lớn',
+    date: '18/09/2026',
+    category: 'Tư vấn kỹ thuật',
+    readTime: '7 phút đọc',
     desc:
-      'Tìm hiểu vai trò của loa Full-range và loa Subwoofer trong một hệ thống âm thanh chuyên nghiệp.',
-    image: '/images/home/ROB1142.JPG',
+      'Phân tích góc phủ âm thanh, tính toán công suất RMS trên từng module loa và cách phân bổ áp suất âm đồng đều cho toàn bộ khán phòng.',
+    image: '/images/home/ROB1146.JPG',
   },
   {
     id: 4,
-    slug: 'trien-lam-am-thanh-quoc-te',
-    title: 'Những công nghệ đáng chú ý tại triển lãm âm thanh quốc tế',
-    date: '12/08/2026',
-    category: 'Triển lãm',
+    slug: 'trien-lam-pro-audio-quoc-te-demo-am-thanh',
+    title: 'Tổng hợp các kỳ triển lãm Demo Pro Audio quốc tế đáng chú ý',
+    date: '05/09/2026',
+    category: 'Triển lãm Demo',
     readTime: '5 phút đọc',
     desc:
-      'Các dòng loa, driver và công nghệ xử lý âm thanh mới đang được giới thiệu tại những triển lãm chuyên ngành.',
-    image: '/images/home/ADE1396.JPG',
+      'Điểm tin những kỳ hội chợ âm thanh biểu diễn quy mô tại Quảng Châu, Thượng Hải, Châu Á và cơ hội kết nối trực tiếp nhà xưởng sản xuất thiết bị.',
+    image: '/images/home/ROB1142.JPG',
   },
   {
     id: 5,
-    slug: 'cong-suat-loa-va-amply',
-    title: 'Công suất loa và amply: Ghép thế nào để hệ thống hoạt động ổn định?',
-    date: '06/08/2026',
-    category: 'Kỹ thuật',
-    readTime: '7 phút đọc',
+    slug: 'nguyen-ly-phoi-ghep-cuc-day-va-vang-so',
+    title: 'Nguyên tắc phối ghép cục đẩy công suất và vang số tránh cháy loa',
+    date: '24/08/2026',
+    category: 'Kỹ thuật vận hành',
+    readTime: '6 phút đọc',
     desc:
-      'Giải thích cách hiểu công suất RMS, Peak và những nguyên tắc cơ bản khi phối ghép loa với cục đẩy công suất.',
+      'Cách căn chỉnh dải cắt tần (Crossover), giới hạn biên độ tín hiệu (Limiter/Compressor) và cân bằng tải giữa main công suất với trở kháng loa.',
     image:
       'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900',
   },
   {
     id: 6,
-    slug: 'he-thong-am-thanh-hoi-truong',
-    title: 'Một hệ thống âm thanh hội trường cần những thiết bị gì?',
-    date: '01/08/2026',
-    category: 'Giải pháp',
-    readTime: '6 phút đọc',
+    slug: 'vai-tro-bo-quan-ly-nguon-dien-am-thanh',
+    title: 'Tại sao dàn âm thanh sự kiện bắt buộc phải có bộ quản lý nguồn?',
+    date: '12/08/2026',
+    category: 'An toàn thiết bị',
+    readTime: '4 phút đọc',
     desc:
-      'Tổng quan các thiết bị cơ bản gồm loa, mixer, cục đẩy, processor và micro trong một hệ thống hội trường.',
+      'Tìm hiểu cơ chế bật tắt tuần tự, lọc nguồn chống nhiễu và bảo vệ chống sốc điện đột ngột gây hư hỏng hệ thống củ loa cao cấp.',
     image:
       'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=900',
   },
 ];
 
 export const NewsPage: React.FC = () => {
-  const zaloPhone = '0912345678';
+  const zaloPhone = '0332933226';
+  const phoneDisplay = '0332 933 226';
 
   const featuredNews = news.find((item) => item.featured);
   const otherNews = news.filter((item) => !item.featured);
 
   return (
-    <main className="bg-white">
+    <main className="bg-white text-slate-900">
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div
@@ -99,30 +104,27 @@ export const NewsPage: React.FC = () => {
           }}
         />
 
-        <div className="absolute inset-0 bg-slate-950/88" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/65 to-slate-950" />
-
-        <div className="absolute left-1/2 top-0 h-72 w-[700px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl" />
+        <div className="absolute inset-0 bg-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-950/70 to-slate-950" />
+        <div className="absolute left-1/2 top-0 h-72 w-[700px] -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 backdrop-blur">
             <Headphones size={15} className="text-amber-400" />
-
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
-              Audio News & Insights
+              Zeno Global Knowledge &amp; Insights
             </span>
           </div>
 
           <h1 className="text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            Tin tức & kiến thức
+            Tin tức thiết bị, hợp quy &amp;
             <span className="block text-amber-400">
-              âm thanh chuyên nghiệp
+              Công nghệ âm thanh chuyên nghiệp
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Cập nhật công nghệ loa, kinh nghiệm lựa chọn thiết bị, giải pháp âm
-            thanh và những xu hướng mới trong ngành Professional Audio.
+            Chuyên mục chia sẻ kinh nghiệm kỹ thuật âm thanh biểu diễn, cập nhật thủ tục hợp chuẩn - hợp quy micro không dây và tin tức triển lãm Pro Audio quốc tế.
           </p>
         </div>
       </section>
@@ -135,26 +137,24 @@ export const NewsPage: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 text-blue-600">
                 <TrendingUp size={18} />
-
                 <span className="text-sm font-bold uppercase tracking-[0.15em]">
-                  Mới nhất
+                  Tiêu điểm ngành âm thanh
                 </span>
               </div>
 
               <h2 className="mt-2 text-2xl font-bold text-slate-950 sm:text-3xl">
-                Bài viết nổi bật
+                Bài viết &amp; Chuyên đề nổi bật
               </h2>
 
               <div className="mt-3 h-1 w-10 rounded-full bg-amber-400" />
             </div>
 
             <p className="max-w-md text-sm leading-6 text-slate-500">
-              Kiến thức thực tế về loa, thiết bị và hệ thống âm thanh chuyên
-              nghiệp.
+              Cập nhật thông tin thực chiến về thiết bị, chứng nhận tần số và thương mại quốc tế.
             </p>
           </div>
 
-          {/* ================= FEATURED ================= */}
+          {/* ================= FEATURED POST ================= */}
           {featuredNews && (
             <article className="group grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/60 lg:grid-cols-[1.15fr_0.85fr]">
               {/* Image */}
@@ -164,22 +164,20 @@ export const NewsPage: React.FC = () => {
                   alt={featuredNews.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent lg:hidden" />
 
                 <div className="absolute left-5 top-5">
-                  <span className="rounded-full bg-amber-400 px-3 py-1.5 text-xs font-bold text-slate-950 shadow-lg">
-                    Bài viết nổi bật
+                  <span className="rounded-full bg-amber-400 px-3.5 py-1.5 text-xs font-bold text-slate-950 shadow-md">
+                    Tiêu điểm đo kiểm
                   </span>
                 </div>
               </div>
 
               {/* Content */}
               <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
-                <div className="flex items-center gap-2">
-                  <Speaker size={16} className="text-blue-600" />
-
-                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-blue-600">
+                <div className="flex items-center gap-2 text-blue-600">
+                  <Radio size={16} />
+                  <span className="text-xs font-bold uppercase tracking-[0.15em]">
                     {featuredNews.category}
                   </span>
                 </div>
@@ -208,8 +206,7 @@ export const NewsPage: React.FC = () => {
                   to={`/news/${featuredNews.slug}`}
                   className="group/button mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold text-blue-600"
                 >
-                  Đọc bài viết
-
+                  Đọc toàn văn bài viết
                   <ArrowRight
                     size={17}
                     className="transition-transform duration-300 group-hover/button:translate-x-1"
@@ -219,16 +216,15 @@ export const NewsPage: React.FC = () => {
             </article>
           )}
 
-          {/* ================= LATEST NEWS ================= */}
+          {/* ================= LATEST NEWS LIST ================= */}
           <div className="mt-16">
             <div className="mb-7 flex items-center justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-600">
-                  Audio Knowledge
+                  Kho kiến thức chuyên ngành
                 </p>
-
                 <h2 className="mt-2 text-2xl font-bold text-slate-950">
-                  Tin tức & kiến thức mới nhất
+                  Tin tức &amp; Giải pháp kỹ thuật mới nhất
                 </h2>
               </div>
 
@@ -236,8 +232,7 @@ export const NewsPage: React.FC = () => {
                 to="/news"
                 className="group hidden items-center gap-2 text-sm font-semibold text-blue-600 sm:flex"
               >
-                Xem tất cả
-
+                Tất cả bài viết
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"
@@ -254,18 +249,17 @@ export const NewsPage: React.FC = () => {
                   {/* Image */}
                   <Link
                     to={`/news/${item.slug}`}
-                    className="relative block h-52 overflow-hidden"
+                    className="relative block h-52 overflow-hidden bg-slate-900"
                   >
                     <img
                       src={item.image}
                       alt={item.title}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent" />
 
                     <div className="absolute left-4 top-4">
-                      <span className="rounded-full border border-white/30 bg-white/95 px-3 py-1 text-[11px] font-bold text-blue-600 shadow-sm backdrop-blur">
+                      <span className="rounded-full border border-white/20 bg-slate-950/70 px-3 py-1 text-[11px] font-bold text-amber-300 shadow-sm backdrop-blur">
                         {item.category}
                       </span>
                     </div>
@@ -286,23 +280,22 @@ export const NewsPage: React.FC = () => {
                     </div>
 
                     <Link to={`/news/${item.slug}`}>
-                      <h3 className="mt-4 text-lg font-bold leading-7 text-slate-950 transition-colors duration-300 group-hover:text-blue-600">
+                      <h3 className="mt-4 text-base font-bold leading-7 text-slate-950 transition-colors duration-300 group-hover:text-blue-600 line-clamp-2">
                         {item.title}
                       </h3>
                     </Link>
 
-                    <p className="mt-3 flex-1 text-sm leading-6 text-slate-500">
+                    <p className="mt-3 flex-1 text-xs leading-6 text-slate-500 line-clamp-3">
                       {item.desc}
                     </p>
 
                     <Link
                       to={`/news/${item.slug}`}
-                      className="group/button mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-600"
+                      className="group/button mt-6 inline-flex items-center gap-2 text-xs font-bold text-blue-600"
                     >
                       Xem chi tiết
-
                       <ArrowRight
-                        size={16}
+                        size={15}
                         className="transition-transform duration-300 group-hover/button:translate-x-1"
                       />
                     </Link>
@@ -314,70 +307,70 @@ export const NewsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= KNOWLEDGE STRIP ================= */}
-      <section className="bg-slate-50 py-14">
+      {/* ================= KNOWLEDGE & SERVICE STRIP ================= */}
+      <section className="bg-slate-50 py-14 border-y border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-5 sm:grid-cols-3">
             {[
               {
-                number: '01',
-                title: 'Kiến thức sản phẩm',
-                desc: 'Hiểu rõ loa, amply, mixer và thiết bị xử lý âm thanh.',
+                icon: FileCheck2,
+                title: 'Đo kiểm & Hợp quy',
+                desc: 'Hỗ trợ thủ tục kiểm định, cấp chứng nhận tần số micro theo đúng chuẩn cơ quan chức năng.',
               },
               {
-                number: '02',
-                title: 'Tư vấn kỹ thuật',
-                desc: 'Kinh nghiệm lựa chọn và phối ghép thiết bị phù hợp.',
+                icon: Ship,
+                title: 'Xuất nhập khẩu Pro Audio',
+                desc: 'Tư vấn mã HS, tối ưu logistics và thủ tục hải quan cho thiết bị âm thanh nhập khẩu chính ngạch.',
               },
               {
-                number: '03',
-                title: 'Xu hướng công nghệ',
-                desc: 'Cập nhật sản phẩm và công nghệ mới của ngành âm thanh.',
+                icon: Globe2,
+                title: 'Triển lãm & Demo thiết bị',
+                desc: 'Cập nhật lịch trình các kỳ expo âm thanh quốc tế và kết nối trực tiếp đối tác sản xuất.',
               },
-            ].map((item) => (
-              <div
-                key={item.number}
-                className="rounded-2xl border border-slate-200 bg-white p-6"
-              >
-                <span className="text-sm font-black text-amber-500">
-                  {item.number}
-                </span>
-
-                <h3 className="mt-3 font-bold text-slate-950">
-                  {item.title}
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-slate-500">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-amber-400">
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="mt-4 font-bold text-slate-950 text-base">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-5 text-slate-500">
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* ================= CTA BANNER ================= */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-slate-950 px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl" />
+          <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-amber-400/10 blur-3xl" />
 
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 text-amber-400">
                 <Headphones size={18} />
-
                 <p className="text-xs font-bold uppercase tracking-[0.18em]">
-                  Zeno Global Audio Support
+                  Zeno Global Audio &amp; Trade Support
                 </p>
               </div>
 
               <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-                Bạn cần tư vấn loa hoặc hệ thống âm thanh?
+                Cần tư vấn hồ sơ hợp quy hoặc cấu hình âm thanh dự án?
               </h2>
 
               <p className="mt-3 text-sm leading-7 text-slate-400 sm:text-base">
-                Gửi nhu cầu, diện tích không gian hoặc sản phẩm bạn quan tâm.
-                Đội ngũ Zeno Global sẽ hỗ trợ đề xuất giải pháp phù hợp.
+                Liên hệ ngay hotline/Zalo <strong>{phoneDisplay}</strong> để được các chuyên gia kỹ thuật và xúc tiến thương mại của Zeno Global hỗ trợ trực tiếp.
               </p>
             </div>
 
@@ -388,9 +381,7 @@ export const NewsPage: React.FC = () => {
               className="group inline-flex flex-shrink-0 items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 text-sm font-bold text-slate-950 transition hover:bg-amber-300"
             >
               <MessageCircle size={18} />
-
-              Tư vấn qua Zalo
-
+              <span>Chat Zalo tư vấn ({phoneDisplay})</span>
               <ArrowRight
                 size={17}
                 className="transition-transform group-hover:translate-x-1"

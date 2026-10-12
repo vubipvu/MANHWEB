@@ -8,13 +8,14 @@ import { AboutPage } from './pages/AboutPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { NewsPage } from './pages/NewsPage';
 import { ContactPage } from './pages/ContactPage';
-
+import { PolicyPage } from './pages/PolicyPage';
 function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 antialiased relative">
       <Header />
       <main>
         <Routes>
+          <Route path="/chinh-sach" element={<PolicyPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductsPage />} />
