@@ -2,46 +2,28 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   MessageCircle,
-  Globe2,
   Menu,
   X,
   ChevronRight,
 } from 'lucide-react';
 
 export const Header: React.FC = () => {
-  const zaloPhone = '0912345678';
+  const zaloPhone = '0332933226';
 
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    {
-      label: 'TRANG CHỦ',
-      path: '/',
-    },
-    {
-      label: 'VỀ CHÚNG TÔI',
-      path: '/about',
-    },
-    {
-      label: 'SẢN PHẨM',
-      path: '/products',
-    },
-    {
-      label: 'TIN TỨC',
-      path: '/news',
-    },
-    {
-      label: 'LIÊN HỆ',
-      path: '/contact',
-    },
+    { label: 'TRANG CHỦ', path: '/' },
+    { label: 'VỀ CHÚNG TÔI', path: '/about' },
+    { label: 'SẢN PHẨM', path: '/products' },
+    { label: 'TIN TỨC', path: '/news' },
+    { label: 'CHÍNH SÁCH', path: '/chinh-sach' },
+    { label: 'LIÊN HỆ', path: '/contact' },
   ];
 
   const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-
+    if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
   };
 
@@ -49,28 +31,14 @@ export const Header: React.FC = () => {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
       {/* ================= DESKTOP HEADER ================= */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-[72px] items-center justify-between">
+        <div className="flex h-[76px] items-center justify-between">
           {/* Logo */}
-          <Link
-            to="/"
-            className="group flex flex-shrink-0 items-center gap-3"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-amber-400 transition-transform duration-300 group-hover:scale-105">
-              <Globe2 size={21} strokeWidth={2.2} />
-            </div>
-
-            <div className="leading-none">
-              <div className="text-lg font-black tracking-wide text-slate-950 sm:text-xl">
-                ZENO
-                <span className="ml-1 text-blue-600">
-                  GLOBAL
-                </span>
-              </div>
-
-              <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.23em] text-slate-400">
-                Professional Audio
-              </p>
-            </div>
+          <Link to="/" className="group flex flex-shrink-0 items-center gap-3">
+            <img
+              src="/images/logo/logotrang.jpg"
+              alt="Zeno Global Logo"
+              className="h-12 w-auto max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* ================= NAVIGATION ================= */}
@@ -90,7 +58,6 @@ export const Header: React.FC = () => {
                 >
                   {item.label}
 
-                  {/* Active line */}
                   {active && (
                     <span className="absolute bottom-0 left-1/2 h-[2px] w-5 -translate-x-1/2 rounded-full bg-amber-400" />
                   )}
@@ -99,9 +66,8 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* ================= RIGHT ================= */}
+          {/* ================= RIGHT ACTION ================= */}
           <div className="flex items-center gap-2">
-            {/* Zalo desktop */}
             <a
               href={`https://zalo.me/${zaloPhone}`}
               target="_blank"
@@ -109,27 +75,21 @@ export const Header: React.FC = () => {
               className="group hidden items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md sm:flex"
             >
               <MessageCircle size={17} />
-
               <span>Chat Zalo</span>
-
               <ChevronRight
                 size={15}
                 className="transition-transform group-hover:translate-x-0.5"
               />
             </a>
 
-            {/* Mobile menu button */}
+            {/* Mobile menu trigger */}
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
               className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:bg-slate-50 lg:hidden"
             >
-              {isMenuOpen ? (
-                <X size={21} />
-              ) : (
-                <Menu size={21} />
-              )}
+              {isMenuOpen ? <X size={21} /> : <Menu size={21} />}
             </button>
           </div>
         </div>
@@ -160,21 +120,15 @@ export const Header: React.FC = () => {
                   }`}
                 >
                   <span>{item.label}</span>
-
                   <ChevronRight
                     size={16}
-                    className={
-                      active
-                        ? 'text-blue-500'
-                        : 'text-slate-300'
-                    }
+                    className={active ? 'text-blue-500' : 'text-slate-300'}
                   />
                 </Link>
               );
             })}
           </nav>
 
-          {/* Mobile Zalo */}
           <a
             href={`https://zalo.me/${zaloPhone}`}
             target="_blank"
@@ -182,8 +136,7 @@ export const Header: React.FC = () => {
             className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-blue-700"
           >
             <MessageCircle size={18} />
-
-            Chat Zalo tư vấn
+            Chat Zalo tư vấn (0332 933 226)
           </a>
         </div>
       </div>
